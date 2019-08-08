@@ -8,65 +8,58 @@ h1 {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  background: #eee;
-  margin: 0; }
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.photo {
-  position: relative; }
+body {
+  margin: 0; }
 
-.sportsman {
+.container {
+  padding: 50px 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px; }
+
+.person img {
   width: 100%;
-  border-radius: 200px;
+  border-radius: 200px; }
+
+.person .extra {
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 21.6px;
+  line-height: 25px;
+  text-align: center; }
+
+.person {
+  width: 100%;
+  cursor: pointer; }
+
+.person:hover .extra {
+  display: block; }
+
+.person:hover .photocard {
+  border-radius: 60px;
   -webkit-transition: all 1s linear;
   transition: all 1s linear; }
 
+.photo {
+  position: relative; }
+
 .number {
   position: absolute;
-  top: 100px;
-  right: 10px; }
+  top: 43%;
+  left: 36%;
+  width: 32px;
+  height: 32px; }
 
-.details {
+.text {
   color: #2f4f4f;
   font-family: Arial, sans-serif;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
-  margin: 8px 0; }
-
-.extra {
-  font-size: 18px;
-  line-height: 21px;
-  color: black;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  overflow: hidden; }
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 30px;
-  padding: 30px 55px 0; }
-
-.person {
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear; }
-
-.sportsman:hover {
-  border-radius: 60px;
-  position: absolute;
-  width: 240px;
-  height: 240px; }
-
-.person:hover {
-  height: 100%;
-  border-radius: 12px;
-  background: #eee;
-  text-align: bottom; }
+  text-align: center; }
 
 @media (min-width: 500px) and (max-width: 750px) {
   .container {
