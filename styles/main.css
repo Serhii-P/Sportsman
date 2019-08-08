@@ -36,6 +36,10 @@ body {
   width: 100%;
   cursor: pointer; }
 
+.person:hover {
+  background: #eee;
+  border-radius: 10px; }
+
 .person:hover .extra {
   display: block; }
 
