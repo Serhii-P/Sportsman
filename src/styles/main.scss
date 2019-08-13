@@ -2,6 +2,82 @@
 @import "fonts";
 @import "typography";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: $c-gray;
+  margin: 0;
+}
+
+.container {
+  padding: 50px 50px 0 ;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.person img {
+  width: 100%;
+  border-radius: 200px;
+}
+
+.person .extra {
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 21.6px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.person {
+  width: 100%;
+
+  cursor: pointer;
+
+}
+
+.person:hover {
+  background: #eee;
+  border-radius: 10px;
+}
+
+.person:hover .extra {
+
+  display: block;
+
+}
+
+.person:hover .photocard {
+
+  border-radius: 60px;
+  transition: all 1s linear;
+}
+
+.photo {
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: 43%;
+  left: 36%;
+  width: 32px;
+  height: 32px;
+}
+
+.text {
+  color: #2f4f4f;
+
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+
+  .container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
 }
